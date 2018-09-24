@@ -96,6 +96,8 @@ begin
     json['POST/' + s] := _POST[s];
   end;
 
+  if not Request.Content.IsEmpty then
+    json['POST_BODY'] := Request.Content;
 
   json['time'] := i2s(TimeUsage) + 'ms';
   Response.Content := json.AsJSON;
