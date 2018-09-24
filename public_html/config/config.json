@@ -5,7 +5,7 @@
     "baseurl" : "",
     "admin_email" : "webmaster@coba.com",
     "development" : true,
-    "debug" : false,
+    "debug" : true,
     "module_default" : "main",
     "language_default" : "id",
     "theme_enable" : false,
@@ -25,7 +25,7 @@
       "password" : "your_password",
       "database_name" : "your_database",
       "prefix" : "",
-      "library" : "..\/libs\/win\/libmysql.dll"
+      "library" : ""
     }
   },
   "mailer" : {
