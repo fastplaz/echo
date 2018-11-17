@@ -1,17 +1,18 @@
 // [x] zip with:
-// zip -r echoLambda.zip ./echo.js ./someFolder
+// zip -r echoLambda.zip ./serverless/amazon/lambda/lambda.js ./public_html
 
 const DEBUG_LOCAL = false;
 process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'];
 
 const executableFile = './echo.bin';
+
 const spawn = require('child_process').spawn;
 var fs = require('fs');
 var readline = require('readline');
 var env = Object.create(process.env);
 
 exports.handler = function (event, context, callback) {
-  let headers = event['headers'] == undefined ? '' : event['headers'];;
+  let headers = event['headers'] == undefined ? '' : event['headers'];
   let queryStrings = event['queryStringParameters'] == undefined ? '' : generateQueryString(event['queryStringParameters']);
   let environment = {
     'method': event['httpMethod'] == undefined ? 'function' : event['httpMethod'],
@@ -51,6 +52,7 @@ exports.handler = function (event, context, callback) {
 
   //var CMD = "echo -n 'a=b;c=d' | REQUEST_METHOD=POST CONTENT_LENGTH=7 QUERY_STRING=limit=20 ./echo.bin";
 
+  
   //env.REQUEST_METHOD = 'POST';
   env.REQUEST_METHOD = environment['method'] == 'function' ? 'POST' : environment['method'];
   env.QUERY_STRING = environment['queryStrings'];
@@ -69,19 +71,14 @@ exports.handler = function (event, context, callback) {
   child.on('close', function (code) {
     var outputScanned = scanOutput(output);
     response['headers'] = outputScanned['headers'];
+    
+    //response['body'] = JSON.stringify(event);
+    response['body'] = outputScanned['body'];
 
-    //s = JSON.stringify(event);
-    s = outputScanned['body'];
-
-    response['body'] = s;
     callback(null, response);
   });
 
 
-  var responseBody = environment['body'];
-  responseBody = JSON.stringify(environment);
-  response['body'] = responseBody;
-  //callback(null, response);
 }
 
 function generateQueryString(AQueryString) {
