@@ -5,6 +5,7 @@ unit main;
 interface
 
 uses
+  fpjson,
   Classes, SysUtils, fpcgi, HTTPDefs, fastplaz_handler, html_lib, database_lib;
 
 type
@@ -71,39 +72,59 @@ end;
 //   curl -X POST -H "Authorization: Basic dW5hbWU6cGFzc3dvcmQ=" "yourtargeturl"
 procedure TMainModule.Post;
 var
-  json: TJSONUtil;
+  json: TJSONObject;
+  jd: TJSONData;
+  ji: TJSONObject;
   i: integer;
   s: string;
 begin
-  json := TJSONUtil.Create;
-
-  json['code'] := Int16(0);
-  json['sitename'] := string(Config.GetValue('systems/sitename', ''));
-
+  json := TJSONObject.Create;
+  json.Add('code', 0);
+  json.Add('sitename', string(Config.GetValue('systems/sitename', '')));
 
   // GET
-  for i := 0 to Application.Request.QueryFields.Count - 1 do
+  if Application.Request.QueryFields.Count > 0 then
   begin
-    s := Application.Request.QueryFields.Names[i];
-    json['GET/' + s] := _GET[s];
+    ji := TJSONObject.Create;
+    for i := 0 to Application.Request.QueryFields.Count - 1 do
+    begin
+      s := Application.Request.QueryFields.Names[i];
+      if s <> '' then
+        ji.Add(s, _GET[s]);
+    end;
+    if ji.Count > 0 then
+      json.Add('GET', ji);
   end;
-
 
   // POST
-  for i := 0 to Application.Request.ContentFields.Count - 1 do
+  if Application.Request.ContentFields.Count > 0 then
   begin
-    s := Application.Request.ContentFields.Names[i];
-    json['POST/' + s] := _POST[s];
+    ji := TJSONObject.Create;
+    for i := 0 to Application.Request.ContentFields.Count - 1 do
+    begin
+      s := Application.Request.ContentFields.Names[i];
+      if s <> '' then
+        ji.Add(s, _POST[s]);
+    end;
+    if ji.Count > 0 then
+      json.Add('POST', ji);
   end;
 
+  // REQUEST BODY
   if not Request.Content.IsEmpty then
-    json['POST_BODY'] := Request.Content;
+  begin
+    if IsJsonValid(Request.Content) then
+    begin
+      jd := GetJSON(Request.Content);
+      json.Add('RAW_BODY', jd);
+    end
+    else
+      json.Add('RAW_BODY', base64_encode(Request.Content));
+  end;
 
-  json['time'] := i2s(TimeUsage) + 'ms';
+  json.Add('time', i2s(TimeUsage) + 'ms');
   Response.Content := json.AsJSON;
-  json.Free;
 end;
-
 
 
 end.
