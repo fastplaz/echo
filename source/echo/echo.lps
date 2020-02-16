@@ -23,8 +23,8 @@
         <Filename Value="main.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="82"/>
-        <CursorPos X="38" Y="81"/>
+        <TopLine Value="114"/>
+        <CursorPos Y="116"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -36,7 +36,7 @@
       </Unit3>
       <Unit4>
         <Filename Value="../../../core/FastPlaz/src/systems/fastplaz_handler.pas"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="182"/>
         <CursorPos X="14" Y="191"/>
         <UsageCount Value="10"/>
@@ -122,13 +122,14 @@
       </Unit15>
       <Unit16>
         <Filename Value="../../../core/FastPlaz/src/library/common.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="165"/>
-        <CursorPos X="10" Y="173"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1363"/>
+        <CursorPos Y="1371"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit16>
     </Units>
-    <JumpHistory Count="19" HistoryIndex="18">
+    <JumpHistory Count="23" HistoryIndex="22">
       <Position1>
         <Filename Value="main.pas"/>
         <Caret Line="92" Column="19" TopLine="85"/>
@@ -204,6 +205,22 @@
         <Filename Value="../../../core/FastPlaz/src/systems/fastplaz_handler.pas"/>
         <Caret Line="191" Column="14" TopLine="182"/>
       </Position19>
+      <Position20>
+        <Filename Value="main.pas"/>
+        <Caret Line="105" Column="14" TopLine="93"/>
+      </Position20>
+      <Position21>
+        <Filename Value="main.pas"/>
+        <Caret Line="59" TopLine="95"/>
+      </Position21>
+      <Position22>
+        <Filename Value="main.pas"/>
+        <Caret Line="116" Column="38" TopLine="114"/>
+      </Position22>
+      <Position23>
+        <Filename Value="../../../core/FastPlaz/src/library/common.pas"/>
+        <Caret Line="179" Column="10" TopLine="166"/>
+      </Position23>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
