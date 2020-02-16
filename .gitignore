@@ -1,1 +1,13 @@
 .DS_Store
+*.dll
+*.exe
+*.bin
+backup.bat
+backup.sh
+
+# lazarus
+*.compiled
+*.lps
+*.bak
+*.ppu
+*.o
