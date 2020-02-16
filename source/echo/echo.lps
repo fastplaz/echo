@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="15">
+    <Units Count="17">
       <Unit0>
         <Filename Value="echo.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="5"/>
+        <TopLine Value="6"/>
         <CursorPos X="49" Y="7"/>
         <UsageCount Value="22"/>
       </Unit0>
@@ -23,8 +23,8 @@
         <Filename Value="main.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="114"/>
-        <CursorPos X="27" Y="124"/>
+        <TopLine Value="82"/>
+        <CursorPos X="38" Y="81"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -36,10 +36,11 @@
       </Unit3>
       <Unit4>
         <Filename Value="../../../core/FastPlaz/src/systems/fastplaz_handler.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="84"/>
-        <CursorPos X="3" Y="103"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="182"/>
+        <CursorPos X="14" Y="191"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="/usr/local/share/fpcsrc/packages/fcl-json/src/jsonconf.pp"/>
@@ -93,11 +94,10 @@
       </Unit11>
       <Unit12>
         <Filename Value="../../../../garapan/FastPlaz/source/core/FastPlaz/src/library/json_lib.pas"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="49"/>
         <CursorPos X="56" Y="79"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit12>
       <Unit13>
         <Filename Value="/usr/local/share/fpcsrc/packages/fcl-web/src/base/fpjwt.pp"/>
@@ -107,14 +107,28 @@
       </Unit13>
       <Unit14>
         <Filename Value="../../../../garapan/FastPlaz/source/core/FastPlaz/src/library/common.pas"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1099"/>
         <CursorPos Y="1094"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit14>
+      <Unit15>
+        <Filename Value="/usr/local/share/fpcsrc/packages/fcl-web/src/base/httpdefs.pp"/>
+        <UnitName Value="HTTPDefs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="221"/>
+        <CursorPos X="3" Y="224"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../../../core/FastPlaz/src/library/common.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="165"/>
+        <CursorPos X="10" Y="173"/>
+        <UsageCount Value="10"/>
+      </Unit16>
     </Units>
-    <JumpHistory Count="18" HistoryIndex="17">
+    <JumpHistory Count="19" HistoryIndex="18">
       <Position1>
         <Filename Value="main.pas"/>
         <Caret Line="92" Column="19" TopLine="85"/>
@@ -179,13 +193,21 @@
         <Caret Line="90" Column="17" TopLine="81"/>
       </Position16>
       <Position17>
-        <Filename Value="../../../../garapan/FastPlaz/source/core/FastPlaz/src/library/common.pas"/>
-        <Caret Line="133" Column="10" TopLine="125"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="75" Column="7" TopLine="64"/>
       </Position17>
       <Position18>
         <Filename Value="main.pas"/>
-        <Caret Line="75" Column="7" TopLine="64"/>
+        <Caret Line="81" Column="32" TopLine="71"/>
       </Position18>
+      <Position19>
+        <Filename Value="../../../core/FastPlaz/src/systems/fastplaz_handler.pas"/>
+        <Caret Line="191" Column="14" TopLine="182"/>
+      </Position19>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>
