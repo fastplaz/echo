@@ -65,6 +65,10 @@ then you should see this result
 
 ![from Postman](img/img04.png)
 
-Read [Tutorial Build FastPlaz Echo Project with Docker](https://medium.com/@luridarmawan/build-fastplaz-echo-project-with-docker-1271aea5f04d) for more detail.
+## References
+
+- [FastPlaz Documentation](https://fastplaz.github.io)
+- [Tutorial Build FastPlaz Echo Project with Docker](https://medium.com/@luridarmawan/build-fastplaz-echo-project-with-docker-1271aea5f04d)
+
 
 Semangat ....!
