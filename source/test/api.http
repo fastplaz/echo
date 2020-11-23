@@ -1,0 +1,15 @@
+
+GET http://course.fastplaz.test/?var1=value2
+
+
+###  Post Example
+
+POST http://course.fastplaz.test
+Authorization:
+Content-Type: application/x-www-form-urlencoded
+
+variable=value
+&var2=val2
+
+
+
