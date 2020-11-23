@@ -11,3 +11,6 @@ backup.sh
 *.bak
 *.ppu
 *.o
+
+*.log
+*.ses
